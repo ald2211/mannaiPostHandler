@@ -12,9 +12,7 @@ const uploadImages = async (imagesData) => {
 };
 
 const getImages=async()=>{
-  const token = localStorage.getItem('token');
-  const config = { headers: { Authorization: `Bearer ${token}` } };
-  const response = await axios.get(API_URL + 'getImages', config);
+  const response = await axios.get(API_URL + 'getImages');
   return response.data;
 }
 
