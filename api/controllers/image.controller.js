@@ -6,7 +6,7 @@ import { errorHandler } from '../utils/customError.js';
 export const addImages = async (req, res, next) => {
   const { imagesData } = req.body; 
   const { user } = req;
-
+  console.log('user:',user)
   try {
     if (!imagesData || imagesData.length === 0) {
       throw new Error('No image data provided');
@@ -38,6 +38,7 @@ export const addImages = async (req, res, next) => {
 export const getImages=async (req,res,next)=>{
   try{
     const { user } = req;
+    console.log('user:',user)
     const images = await Image.find({ user: user.id }).sort({ order: 1 });
     if(images){
       res.status(200).json({success:true,allImages:images})

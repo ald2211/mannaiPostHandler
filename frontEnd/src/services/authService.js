@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'https://mannaiposthandler.onrender.com/api/v1/auth/';
+const API_URL = 'http://localhost:3000/api/v1/auth/';
 
 
 const login = async (userData) => {
