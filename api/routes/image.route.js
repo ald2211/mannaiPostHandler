@@ -6,7 +6,7 @@ import verifyUser from '../utils/verify.js';
 const router= express.Router()
 
 // get all images
-router.get('/getImages',verifyUser,getImages)
+router.get('/getImages',getImages)
 
 // Upload images route
 router.post('/upload', verifyUser, addImages);
