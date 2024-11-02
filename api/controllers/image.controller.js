@@ -38,7 +38,7 @@ export const addImages = async (req, res, next) => {
 export const getImages=async (req,res,next)=>{
   try{
     
-    const images = await Image.find({}).sort({ order: 1 });
+    const images = await Image.find({},{user:0}).sort({ order: 1 });
     if(images){
       res.status(200).json({success:true,allImages:images})
     }
